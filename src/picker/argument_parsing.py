@@ -179,7 +179,6 @@ def __parse_arguments(only_known: bool) -> argparse.Namespace:
         dest="keybinding_type_numerical",
         action="store",
         type=str,
-        default="Alt+n",
         help="Choose the keyboard shortcut to directly type the character's unicode codepoint numerically "
         "with Ctrl+Shift+U<codepoint>",
     )

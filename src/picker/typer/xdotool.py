@@ -49,7 +49,7 @@ class XDoToolTyper(Typer):
                     active_window,
                     "key",
                     "--clearmodifiers",
-                    "U" + codepoint,
+                    "Ctrl+Shift+U" + codepoint,
                     "sleep",
                     "0.05",
                 ]

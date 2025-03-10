@@ -26,5 +26,6 @@ class WTypeTyper(Typer):
     def type_numerical(self, characters: str, active_window: str) -> None:
         for character in characters:
             unicode_codepoint = get_codepoints(character)
+            print(["wtype", "-M", "ctrl"," -M", "shift", "-k", "u"] + [f for p in unicode_codepoint for f in ("-k", p)] + ["-m", "ctrl", "-m", "shift"])
             # Run Ctrl+Shift+U + the unicode codepoint, then release Ctrl and Shift
-            run(["wtype", "-M", "ctrl"," -M", "shift", "u"] + [p for p  in unicode_codepoint] + ["-m", "ctrl", "-m", "shift"])
+            run(["wtype", "-M", "ctrl"," -M", "shift", "-k", "u"] + [f for p in unicode_codepoint for f in ("-k", p)] + ["-m", "ctrl", "-m", "shift"])
